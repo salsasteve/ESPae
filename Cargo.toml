@@ -1,5 +1,5 @@
 [package]
-name = "look_no_std"
+name = "espae"
 version = "0.1.0"
 authors = ["Salsa Steve <elmanstevelaguna@gmail.com>"]
 edition = "2021"
@@ -29,3 +29,11 @@ incremental = false
 lto = 'fat'
 opt-level = 's'
 overflow-checks = false
+
+[build-dependencies]
+burn-import = { version = "0.13.2", default-features = false, features = ["onnx"] }
+
+[features]
+default = ["embedded-model"]
+
+embedded-model = []
